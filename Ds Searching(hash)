@@ -63,3 +63,110 @@ userCityMapping.put(userName, "London");
 System.out.println(userName+ "moved to a new city" +userCityMapping.get(userName)+ "new userCityMapping:" +userCityMapping);
 }
 }
+ITERATIVE HASHMAP
+import java.util.HashMap;
+import java.util.Map;
+
+public class IterateHashMap {
+public static void main(String[] args) {
+Map<String, Double> employeeSalary = new HashMap();
+employeeSalary.put("Preeti",4079977.90);
+employeeSalary.put("Siddhartha",4279977.90);
+employeeSalary.put("Rishabh",4479977.90);
+employeeSalary.put("Atul",4679977.90);
+//String a[] = {"PREETI","Deepak"};
+// for(int i:a)
+System.out.println(employeeSalary);
+employeeSalary.forEach((String employee, Double salary)-> {
+System.out.println(employee + "==>" +salary);
+})
+;
+
+
+}
+}
+REMOVE KEYS IN HASH MAP
+package com.search;
+
+import java.util.HashMap;
+import java.util.Map;
+
+//Remove keys from hashMap
+public class RemoveKeys {
+public static void main(String[] args) {
+Map<String, String > husbWifeMapping = new HashMap();
+husbWifeMapping.put("Ranveer", "Alia");
+husbWifeMapping.put("Veerat", "Anushka");
+husbWifeMapping.put("Vicky", "Katreena");
+husbWifeMapping.put("Jack", "Marie");
+
+System.out.println(husbWifeMapping);
+
+//Remove a key from HashMap
+String husband= "Jack";
+String wife = husbWifeMapping.remove(husband);
+
+System.out.println("Couple (" +husband+ "==>" +wife+ ")got divorced");
+
+System.out.println("new HashMap" +husbWifeMapping);
+
+
+}
+}
+NEW PROGRAM
+package com.search;
+
+import java.util.HashMap;
+import java.util.Map;
+
+class Employee
+{
+private int id;
+private String name;
+private String city;
+public Employee() {
+super();
+// TODO Auto-generated constructor stub
+}
+public Employee(int id, String name, String city) {
+super();
+this.id = id;
+this.name = name;
+this.city = city;
+}
+public int getId() {
+return id;
+}
+public void setId(int id) {
+this.id = id;
+}
+public String getName() {
+return name;
+}
+public void setName(String name) {
+this.name = name;
+}
+public String getCity() {
+return city;
+}
+public void setCity(String city) {
+this.city = city;
+}
+@Override
+public String toString() {
+return "Employee [id=" + id + ", name=" + name + ", city=" + city + "]";
+}
+
+
+}
+public class HashMapUserObject {
+
+public static void main(String[] args) {
+Map<Integer,Employee> empMapping = new HashMap();
+empMapping.put(1001, new Employee(1001,"Deepak","Mumbai"));
+empMapping.put(1002, new Employee(1002,"Rishabh","ABC"));
+
+System.out.println(empMapping);
+}
+
+}
