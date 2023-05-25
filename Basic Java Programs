@@ -44,3 +44,70 @@ System.out.printf("%.1f %c %.1f=%.1f",first,operator,second,result);
 
 }
 
+package com.basicjava;
+import java.util.ArrayList;
+
+class Employee{
+	@Override
+	public String toString() {
+		return "Employee [id=" + id + ", name=" + name + ", salary=" + salary + "]";
+	}
+	public int getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public double getSalary() {
+		return salary;
+	}
+	public void setSalary(double salary) {
+		this.salary = salary;
+	}
+	public Employee(int id, String name, double salary) {
+		super();
+		this.id = id;
+		this.name = name;
+		this.salary = salary;
+	}
+	int id;
+	String name;
+	double salary;
+}
+
+
+
+public class ArrayList_Demo{
+public static void main(String[] args) {
+	ArrayList<Employee> list = new ArrayList<>();
+	list.add(new Employee(105, "Siri", 333442.23));
+	list.add(new Employee(106, "Haritha", 323442.23));
+
+	
+	System.out.println(list);
+}
+}
+
+package com.basicjava;
+
+
+import java.util.LinkedList;
+public class Linkedlist_practice {
+	public static void main(String[] args) {
+		LinkedList <String> items=new LinkedList<>();
+		items.add("Biryani");
+		items.add("Noodles");
+		items.add("pizza");
+		System.out.println(items);
+		String str=items.get(2);
+		String str1=items.remove(1);
+		System.out.println("Element at index 2:"+str);
+	    System.out.println("");
+		}
+	}
