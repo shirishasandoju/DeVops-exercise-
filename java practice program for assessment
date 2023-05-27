@@ -48,5 +48,44 @@ public static void main(String[] args) {
 	
     }	
 	}
+package com.basicjava;
+public class Bsort {
+	 void bubble  (int a[])
+	{
+        int n=a.length;
+		int i,j,temp;
+		for (  i=0;i<n;i++)
+		{
+			for (j=i+1;j<n;j++)
+			{
+			if (a[j]<a[i])
+					{
+				temp= a[i];
+				a[i]=a[j];
+				a[j]= temp;
+					}
+			
+		}
+		}
+	}
+	 //print Array
+	void printArr(int a[])
+	{
+		int n= a.length;
+		for( int i=0;i<n;i++)
+		System.out.println(a[i] + "");	
+	}
+	public static void main(String[] args) {
+		int a[]= {40,30,10,70,90,50};
+		Bsort b1= new Bsort();
+		System.out.println("Before sorting");
+		b1.printArr(a);
+		b1.bubble(a);
+		System.out.println();
+		System.out.println("After Sorting in ascending order");
+		b1.printArr(a);
+		
+	}
+}
 	
 
