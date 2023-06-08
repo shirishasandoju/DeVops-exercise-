@@ -1,0 +1,135 @@
+Encapsulation program:
+package com.oops;
+class Medicine
+{
+private int medrefNo;
+private String medIngredname;
+//public Medicine(int medrefNo, String medIngredname) {
+// super();
+// this.medrefNo = medrefNo;
+// this.medIngredname = medIngredname;
+//}
+public int getMedrefNo() {
+System.out.println("Capsule Vitmin A");
+return medrefNo;
+}
+public void setMedrefNo(int medrefNo) {
+this.medrefNo = medrefNo;
+}
+public String getMedIngredname() {
+return medIngredname;
+}
+public void setMedIngredname(String medIngredname) {
+this.medIngredname = medIngredname;
+}
+
+
+
+}
+public class EncapsulationEx {
+public static void main(String[] args) {
+Medicine m1 = new Medicine();
+m1.getMedrefNo();
+}
+}
+
+POLYMORPHISM PROGRAM:
+
+class Student
+{
+public void displayName()
+{
+System.out.println("Displaying all the students names!");
+}
+public int calculateFees(int fee)
+{
+int total = fee;
+System.out.println(total);
+return total;
+}
+public float calculateFees(float fee)
+{
+float total = fee;
+System.out.println(total);
+return total;
+}
+}
+public class PolyExample {
+public static void main(String[] args) {
+Student s1 = new Student();
+s1.calculateFees(20000);
+s1.displayName();
+s1.calculateFees(5000);
+}
+}
+
+
+package com.oops;
+interface P1
+{
+public void access();
+}
+class Parents
+{
+public void diplay()
+{
+System.out.println("displaying....");
+}
+}
+public class OverRidingEx extends Parents implements P1{
+
+public void diplay()
+{
+System.out.println("displaying....");
+}
+
+
+public void access() {
+System.out.println("Accessing...");
+
+}
+
+}
+
+
+
+package com.oops;
+// abstract -> only the declaration of method in a class but not implementation.
+abstract class Employee
+{// when we dont want certain method's implementations to been seen publically
+// tv remote -> 101 -> channel 101 -> watch the channel
+abstract public void addEmploye();
+public void addEmpAge()
+{
+System.out.println("Adding the age to the age collum!");
+}
+// methods declared in interface can not be implemented there itself
+// till java 7 its not allowed for interface to write the body of method in it.
+
+}
+interface A
+{
+public void displayDate();
+public void displaySalary();
+}
+public class AbstractionEx extends Employee implements A{
+
+@Override
+public void addEmploye() {
+System.out.println("Adding Employee...");
+
+}
+public void displayDate() {System.out.println("dates");}
+public static void main(String[] args) {
+AbstractionEx obj1 = new AbstractionEx();
+obj1.addEmpAge();
+obj1.addEmploye();
+obj1.displayDate();
+}
+@Override
+public void displaySalary() {
+System.out.println("salary..");
+
+}
+
+}
