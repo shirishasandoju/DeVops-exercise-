@@ -13,5 +13,7 @@ db.articles.insert({title:"Article 3",content:"Melody",category:"Music"})
 db.photos.insertMany([{title:"photo 1",description:"Sunset view",image_url:"photo1.jpg"},{title:"photo 2",description:"Beach view",image_url:"photo2.jpg"},
 {title:"photo 3",description:"Mountain view",image_url:"photo3.jpg"}])
 
+db.Videos.updateOne({title:"video 1"},{$set:{photos:[{"url":"photo1.jpg","description":"senset view","title":"photo 1","photo_id":1}]}})
+
 
 db.Videos.insertMany([{title:"video 1",duration:120,format:"mp4"},{title:"video 2",duration:180,format:"avi"},{title:"video 3",duration:150,format:"mkv"}])
